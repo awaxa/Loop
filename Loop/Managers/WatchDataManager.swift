@@ -31,7 +31,7 @@ final class WatchDataManager: NSObject, WCSessionDelegate {
 
     private var watchSession: WCSession? = {
         if WCSession.isSupported() {
-            return WCSession.default()
+            return WCSession.default
         } else {
             return nil
         }
@@ -193,7 +193,7 @@ final class WatchDataManager: NSObject, WCSessionDelegate {
     }
 
     func sessionDidDeactivate(_ session: WCSession) {
-        watchSession = WCSession.default()
+        watchSession = WCSession.default
         watchSession?.delegate = self
         watchSession?.activate()
     }
