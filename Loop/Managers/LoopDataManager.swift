@@ -875,7 +875,7 @@ final class LoopDataManager {
             lastRequestedBolus == nil,  // Don't recommend changes if a bolus was just set
             let tempBasal = predictedGlucose.recommendedTempBasal(
                 to: glucoseTargetRange,
-                suspendThreshold: settings.minimumBGGuard?.quantity,
+                suspendThreshold: settings.suspendThreshold?.quantity,
                 sensitivity: insulinSensitivity,
                 model: model,
                 basalRates: basalRates,
@@ -920,7 +920,7 @@ final class LoopDataManager {
 
         let recommendation = predictedGlucose.recommendedBolus(
             to: glucoseTargetRange,
-            suspendThreshold: settings.minimumBGGuard?.quantity,
+            suspendThreshold: settings.suspendThreshold?.quantity,
             sensitivity: insulinSensitivity,
             model: model,
             pendingInsulin: pendingInsulin,
