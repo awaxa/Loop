@@ -81,7 +81,7 @@ final class BolusInterfaceController: WKInterfaceController, IdentifiableClass {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        var maxBolusValue: Double = 15
+        var maxBolusValue: Double = 25
         var pickerValue = 0
 
         if let context = context as? BolusSuggestionUserInfo {
@@ -158,7 +158,7 @@ final class BolusInterfaceController: WKInterfaceController, IdentifiableClass {
     fileprivate var accumulatedRotation: Double = 0
 }
 
-fileprivate let rotationsPerValue: Double = 1/24
+fileprivate let rotationsPerValue: Double = 1/96
 
 extension BolusInterfaceController: WKCrownDelegate {
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
