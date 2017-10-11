@@ -81,7 +81,7 @@ final class BolusInterfaceController: WKInterfaceController, IdentifiableClass {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        var maxBolusValue: Double = 15
+        var maxBolusValue: Double = 25
         var pickerValue = 0
 
         if let context = context as? BolusSuggestionUserInfo {
@@ -94,7 +94,7 @@ final class BolusInterfaceController: WKInterfaceController, IdentifiableClass {
             }
 
             let recommendedPickerValue = pickerValueFromBolusValue(recommendedBolus)
-            pickerValue = Int(Double(recommendedPickerValue) * 0.75)
+            pickerValue = Int(Double(recommendedPickerValue))
 
             if let valueString = formatter.string(from: NSNumber(value: recommendedBolus)) {
                 recommendedValueLabel.setText(String(format: NSLocalizedString("Rec: %@ U", comment: "The label and value showing the recommended bolus"), valueString).localizedUppercase)
@@ -158,7 +158,7 @@ final class BolusInterfaceController: WKInterfaceController, IdentifiableClass {
     fileprivate var accumulatedRotation: Double = 0
 }
 
-fileprivate let rotationsPerValue: Double = 1/24
+fileprivate let rotationsPerValue: Double = 1/96
 
 extension BolusInterfaceController: WKCrownDelegate {
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {

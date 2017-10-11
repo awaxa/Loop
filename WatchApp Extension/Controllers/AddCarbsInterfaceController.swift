@@ -19,8 +19,8 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
                 return
             }
 
-            guard carbValue <= 100 else {
-                carbValue = 100
+            guard carbValue <= 350 else {
+                carbValue = 350
                 return
             }
 
@@ -127,7 +127,7 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
     fileprivate var accumulatedRotation: Double = 0
 }
 
-fileprivate let rotationsPerCarb: Double = 1/24
+fileprivate let rotationsPerCarb: Double = 1/72
 
 extension AddCarbsInterfaceController: WKCrownDelegate {
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
