@@ -16,7 +16,7 @@ extension UIColor {
 
     @nonobjc static let doseTintColor = UIColor(red: 255 / 255, green: 109 / 255, blue: 0, alpha: 1)
 
-    @nonobjc static let freshColor = UIColor(red: 64 / 255, green: 219 / 255, blue: 89 / 255, alpha: 1)
+    @nonobjc static let freshColor = UIColor.purpleColor
 
     @nonobjc static let glucoseTintColor = UIColor(red: 0 / 255, green: 122 / 255, blue: 244 / 255, alpha: 1)
 

@@ -12,12 +12,12 @@ import WatchConnectivity
 
 final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClass {
 
-    private var carbValue: Int = 15 {
+    private var carbValue: Int = 14 {
         didSet {
             if carbValue < 0 {
                 carbValue = 0
-            } else if carbValue > 100 {
-                carbValue = 100
+            } else if carbValue > 250 {
+                carbValue = 250
             }
 
             valueLabel.setText(String(carbValue))
@@ -58,11 +58,11 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
 
             switch absorptionTime {
             case .fast:
-                absorptionButtonA.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonA.setBackgroundColor(UIColor.blue)
             case .medium:
-                absorptionButtonB.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonB.setBackgroundColor(UIColor.blue)
             case .slow:
-                absorptionButtonC.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonC.setBackgroundColor(UIColor.blue)
             }
         }
     }
@@ -119,7 +119,7 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
 
     // MARK: - Actions
 
-    private let valueIncrement = 5
+    private let valueIncrement = 7
     private let dateIncrement = TimeInterval(minutes: 15)
 
     @IBAction func decrement() {
@@ -187,7 +187,7 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
     private var accumulatedRotation: Double = 0
 }
 
-private let rotationsPerIncrement: Double = 1/24
+private let rotationsPerIncrement: Double = 1/60
 
 extension AddCarbsInterfaceController: WKCrownDelegate {
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
