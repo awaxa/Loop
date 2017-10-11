@@ -12,15 +12,15 @@ import WatchConnectivity
 
 final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClass {
 
-    private var carbValue: Int = 15 {
+    private var carbValue: Int = 14 {
         didSet {
             guard carbValue >= 0 else {
                 carbValue = 0
                 return
             }
 
-            guard carbValue <= 100 else {
-                carbValue = 100
+            guard carbValue <= 250 else {
+                carbValue = 250
                 return
             }
 
@@ -62,11 +62,11 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
 
             switch absorptionTime {
             case .fast:
-                absorptionButtonA.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonA.setBackgroundColor(UIColor.blue)
             case .medium:
-                absorptionButtonB.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonB.setBackgroundColor(UIColor.blue)
             case .slow:
-                absorptionButtonC.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonC.setBackgroundColor(UIColor.blue)
             }
         }
     }
@@ -131,12 +131,12 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
 
     @IBAction func decrementCarbValue() {
         activeValueLabel = carbValueLabel
-        carbValue -= 5
+        carbValue -= 7
     }
 
     @IBAction func incrementCarbValue() {
         activeValueLabel = carbValueLabel
-        carbValue += 5
+        carbValue += 7
     }
 
     @IBAction func toggleActiveValueLabel() {
@@ -186,7 +186,7 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
     private var accumulatedRotation: Double = 0
 }
 
-private let rotationsPerIncrement: Double = 1/24
+private let rotationsPerIncrement: Double = 1/60
 
 extension AddCarbsInterfaceController: WKCrownDelegate {
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
