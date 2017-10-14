@@ -12,7 +12,7 @@ import WatchConnectivity
 
 final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClass {
 
-    fileprivate var carbValue: Int = 15 {
+    fileprivate var carbValue: Int = 14 {
         didSet {
             guard carbValue >= 0 else {
                 carbValue = 0
@@ -36,11 +36,11 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
 
             switch absorptionTime {
             case .fast:
-                absorptionButtonA.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonA.setBackgroundColor(UIColor.blue)
             case .medium:
-                absorptionButtonB.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonB.setBackgroundColor(UIColor.blue)
             case .slow:
-                absorptionButtonC.setBackgroundColor(UIColor.carbsColor)
+                absorptionButtonC.setBackgroundColor(UIColor.blue)
             }
         }
     }
@@ -77,11 +77,11 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
     // MARK: - Actions
 
     @IBAction func decrement() {
-        carbValue -= 5
+        carbValue -= 7
     }
 
     @IBAction func increment() {
-        carbValue += 5
+        carbValue += 7
     }
 
     @IBAction func setAbsorptionTimeFast() {
