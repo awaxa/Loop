@@ -300,7 +300,7 @@ final class DeviceDataManager {
                         return
                     }
 
-                    let warningThresholds: [Double] = [10, 20, 30]
+                    let warningThresholds: [Double] = [10]
 
                     for threshold in warningThresholds {
                         if newValue.unitVolume <= threshold && previousVolume > threshold {
