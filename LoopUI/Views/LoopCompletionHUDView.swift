@@ -111,7 +111,7 @@ public final class LoopCompletionHUDView: BaseHUDView {
 
         formatter.allowedUnits = [.day, .hour, .minute]
         formatter.maximumUnitCount = 1
-        formatter.unitsStyle = .short
+        formatter.unitsStyle = .abbreviated
 
         return formatter
     }()
@@ -121,9 +121,9 @@ public final class LoopCompletionHUDView: BaseHUDView {
             let ago = abs(min(0, date.timeIntervalSinceNow))
 
             switch ago {
-            case let t where t <= .minutes(6):
+            case let t where t <= .minutes(7):
                 freshness = .fresh
-            case let t where t <= .minutes(16):
+            case let t where t <= .minutes(12):
                 freshness = .aging
             case let t where t <= .hours(12):
                 freshness = .stale
@@ -138,7 +138,7 @@ public final class LoopCompletionHUDView: BaseHUDView {
                      UIContentSizeCategory.medium,
                      UIContentSizeCategory.large:
                     // Use a longer form only for smaller text sizes
-                    caption.text = String(format: NSLocalizedString("%@ ago", comment: "Format string describing the time interval since the last completion date. (1: The localized date components"), timeString)
+                    caption.text = String(format: NSLocalizedString("%@", comment: "Format string describing the time interval since the last completion date. (1: The localized date components"), timeString)
                 default:
                     caption.text = timeString
                 }

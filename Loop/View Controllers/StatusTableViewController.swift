@@ -626,22 +626,22 @@ final class StatusTableViewController: ChartsTableViewController {
                 cell.chartContentView.chartGenerator = { [unowned self] (frame) in
                     return self.charts.glucoseChartWithFrame(frame)?.view
                 }
-                cell.titleLabel?.text = NSLocalizedString("Glucose", comment: "The title of the glucose and prediction graph")
+                cell.titleLabel?.text = NSLocalizedString("CGM", comment: "The title of the glucose and prediction graph")
             case .iob:
                 cell.chartContentView.chartGenerator = { [unowned self] (frame) in
                     return self.charts.iobChartWithFrame(frame)?.view
                 }
-                cell.titleLabel?.text = NSLocalizedString("Active Insulin", comment: "The title of the Insulin On-Board graph")
+                cell.titleLabel?.text = NSLocalizedString("IOB", comment: "The title of the Insulin On-Board graph")
             case .dose:
                 cell.chartContentView?.chartGenerator = { [unowned self] (frame) in
                     return self.charts.doseChartWithFrame(frame)?.view
                 }
-                cell.titleLabel?.text = NSLocalizedString("Insulin Delivery", comment: "The title of the insulin delivery graph")
+                cell.titleLabel?.text = NSLocalizedString("TDD", comment: "The title of the insulin delivery graph")
             case .cob:
                 cell.chartContentView?.chartGenerator = { [unowned self] (frame) in
                     return self.charts.cobChartWithFrame(frame)?.view
                 }
-                cell.titleLabel?.text = NSLocalizedString("Active Carbohydrates", comment: "The title of the Carbs On-Board graph")
+                cell.titleLabel?.text = NSLocalizedString("COB", comment: "The title of the Carbs On-Board graph")
             }
 
             self.tableView(tableView, updateSubtitleFor: cell, at: indexPath)
@@ -669,7 +669,7 @@ final class StatusTableViewController: ChartsTableViewController {
                     timeFormatter.dateStyle = .none
                     timeFormatter.timeStyle = .short
 
-                    cell.titleLabel.text = NSLocalizedString("Recommended Basal", comment: "The title of the cell displaying a recommended temp basal value")
+                    cell.titleLabel.text = NSLocalizedString("enact", comment: "The title of the cell displaying a recommended temp basal value")
                     cell.subtitleLabel?.text = String(format: NSLocalizedString("%1$@ U/hour @ %2$@", comment: "The format for recommended temp basal rate and time. (1: localized rate number)(2: localized time)"), NumberFormatter.localizedString(from: NSNumber(value: tempBasal.unitsPerHour), number: .decimal), timeFormatter.string(from: date))
                     cell.selectionStyle = .default
 
@@ -681,7 +681,7 @@ final class StatusTableViewController: ChartsTableViewController {
                         cell.accessoryView = nil
                     }
                 case .enactingBolus:
-                    cell.titleLabel.text = NSLocalizedString("Starting Bolus", comment: "The title of the cell indicating a bolus is being sent")
+                    cell.titleLabel.text = NSLocalizedString("enacting", comment: "The title of the cell indicating a bolus is being sent")
                     cell.subtitleLabel.text = nil
 
                     let indicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
@@ -700,7 +700,7 @@ final class StatusTableViewController: ChartsTableViewController {
             switch ChartRow(rawValue: indexPath.row)! {
             case .glucose:
                 if let eventualGlucose = eventualGlucoseDescription {
-                    cell.subtitleLabel?.text = String(format: NSLocalizedString("Eventually %@", comment: "The subtitle format describing eventual glucose. (1: localized glucose value description)"), eventualGlucose)
+                    cell.subtitleLabel?.text = String(format: NSLocalizedString("forecast: %@", comment: "The subtitle format describing eventual glucose. (1: localized glucose value description)"), eventualGlucose)
                 } else {
                     cell.subtitleLabel?.text = nil
                 }
@@ -716,7 +716,7 @@ final class StatusTableViewController: ChartsTableViewController {
 
                 if  let total = totalDelivery,
                     let totalString = integerFormatter.string(from: NSNumber(value: total)) {
-                    cell.subtitleLabel?.text = String(format: NSLocalizedString("%@ U Total", comment: "The subtitle format describing total insulin. (1: localized insulin total)"), totalString)
+                    cell.subtitleLabel?.text = String(format: NSLocalizedString("%@ U", comment: "The subtitle format describing total insulin. (1: localized insulin total)"), totalString)
                 } else {
                     cell.subtitleLabel?.text = nil
                 }
@@ -894,7 +894,7 @@ final class StatusTableViewController: ChartsTableViewController {
             item.accessibilityHint = NSLocalizedString("Enables", comment: "The action hint of the workout mode toggle button when disabled")
         }
 
-        item.tintColor = UIColor.COBTintColor
+        item.tintColor = UIColor.blueColor
 
         return item
     }
@@ -910,7 +910,7 @@ final class StatusTableViewController: ChartsTableViewController {
             item.accessibilityHint = NSLocalizedString("Enables", comment: "The action hint of the workout mode toggle button when disabled")
         }
 
-        item.tintColor = UIColor.glucoseTintColor
+        item.tintColor = UIColor.staleColor
 
         return item
     }

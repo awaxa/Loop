@@ -16,13 +16,13 @@ extension UIColor {
 
     @nonobjc static let cellBackgroundColor = UIColor(white: 239 / 255, alpha: 1)
 
-    @nonobjc static let IOBTintColor = UIColor.HIGOrangeColor()
+    @nonobjc static let IOBTintColor = UIColor(red: 0 / 255, green: 153 / 255, blue: 255 / 255, alpha: 1)
 
-    @nonobjc static let COBTintColor = UIColor(red: 99 / 255, green: 218 / 255, blue: 56 / 255, alpha: 1)
+    @nonobjc static let COBTintColor = UIColor(red: 255 / 255, green: 0 / 255, blue: 197 / 255, alpha: 1)
 
-    @nonobjc static let agingColor = UIColor.HIGYellowColor()
+    @nonobjc static let agingColor = UIColor(red: 239 / 255, green: 171 / 255, blue: 255 / 255, alpha: 1)
 
-    @nonobjc static let staleColor = UIColor.HIGRedColor()
+    @nonobjc static let staleColor = UIColor(red: 184 / 255, green: 212 / 255, blue: 230 / 255, alpha: 1)
 
     @nonobjc static let unknownColor = UIColor(red: 198 / 255, green: 199 / 255, blue: 201 / 255, alpha: 1)
 

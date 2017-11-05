@@ -35,7 +35,7 @@ final class BolusViewController: UITableViewController, IdentifiableClass, UITex
         spellOutFormatter.numberStyle = .spellOut
 
         let amount = bolusRecommendation?.amount ?? 0
-        bolusAmountTextField.accessibilityHint = String(format: NSLocalizedString("Recommended Bolus: %@ Units", comment: "Accessibility hint describing recommended bolus units"), spellOutFormatter.string(from: NSNumber(value: amount)) ?? "0")
+        bolusAmountTextField.accessibilityHint = String(format: NSLocalizedString("add: %@ Units", comment: "Accessibility hint describing recommended bolus units"), spellOutFormatter.string(from: NSNumber(value: amount)) ?? "0")
 
         bolusAmountTextField.becomeFirstResponder()
 
@@ -52,7 +52,7 @@ final class BolusViewController: UITableViewController, IdentifiableClass, UITex
             iobStr = "-"
         }
 
-        var rval = String(format: NSLocalizedString("Active Insulin: %@", comment: "The string format describing active insulin. (1: localized insulin value description)"), iobStr)
+        var rval = String(format: NSLocalizedString("IOB: %@", comment: "The string format describing active insulin. (1: localized insulin value description)"), iobStr)
 
         if let pending = pendingInsulin, pending > 0, let pendingStr = insulinFormatter.string(from: NSNumber(value: pending))
         {
@@ -92,7 +92,7 @@ final class BolusViewController: UITableViewController, IdentifiableClass, UITex
                 cobStr = "-"
 
             }
-            activeCarbohydratesDescription = String(format: NSLocalizedString("Active Carbohydrates: %@", comment: "The string format describing active carbohydrates. (1: localized glucose value description)"), cobStr)
+            activeCarbohydratesDescription = String(format: NSLocalizedString("COB: %@", comment: "The string format describing active carbohydrates. (1: localized glucose value description)"), cobStr)
         }
     }
 

@@ -208,10 +208,9 @@ class StatusViewController: UIViewController, NCWidgetProviding {
                     if let eventualGlucoseNumberString = formatter.string(from: NSNumber(value: eventualGlucose.quantity.doubleValue(for: unit))) {
                         subtitleLabel.text = String(
                             format: NSLocalizedString(
-                                "Eventually %1$@ %2$@",
+                                "forecast: %1$@",
                                 comment: "The subtitle format describing eventual glucose. (1: localized glucose value description) (2: localized glucose units description)"),
-                            eventualGlucoseNumberString,
-                            unit.glucoseUnitDisplayString
+                            eventualGlucoseNumberString
                         )
                         subtitleLabel.isHidden = false
                     }

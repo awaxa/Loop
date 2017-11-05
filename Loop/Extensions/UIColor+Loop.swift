@@ -14,7 +14,7 @@ extension UIColor {
 
     @nonobjc static let axisLineColor = UIColor.clear
 
-    @nonobjc static let doseTintColor = UIColor.HIGOrangeColor()
+    @nonobjc static let doseTintColor = UIColor(red: 0 / 255, green: 153 / 255, blue: 255 / 255, alpha: 1)
 
     @nonobjc static let freshColor = UIColor.purpleColor
 

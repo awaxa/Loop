@@ -68,34 +68,28 @@
                                 </group>
                                 <group width="1" height="0.25" alignment="center" spacing="0.0" id="XMa-yL-87D">
                                     <items>
-                                        <button width="0.33000000000000002" height="1" alignment="left" title="🍭" id="gAn-qe-OvX">
-                                            <fontDescription key="font" type="system" pointSize="25"/>
-                                            <variation key="device=watch42mm">
-                                            </variation>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="2" id="gAn-qe-OvX">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
                                             <connections>
                                                 <action selector="setAbsorptionTimeFast" destination="zh0-gB-D44" id="Eoj-WC-Fod"/>
                                             </connections>
                                         </button>
-                                        <button width="0.33000000000000002" height="1" alignment="left" title="2" id="0fo-Z3-hTi">
-                                            <color key="backgroundColor" red="0.38823529410000002" green="0.85490196080000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="font" type="system" pointSize="25"/>
-                                            <variation key="device=watch42mm">
-                                            </variation>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="3" id="0fo-Z3-hTi">
+                                            <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="16"/>
                                             <connections>
                                                 <action selector="setAbsorptionTimeMedium" destination="zh0-gB-D44" id="GXY-aa-sz8"/>
                                             </connections>
                                         </button>
-                                        <button width="0.33000000000000002" height="1" alignment="left" title="3" id="dPF-QZ-sh6">
-                                            <fontDescription key="font" type="system" pointSize="25"/>
-                                            <variation key="device=watch42mm">
-                                            </variation>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="4" id="dPF-QZ-sh6">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
                                             <connections>
                                                 <action selector="setAbsorptionTimeSlow" destination="zh0-gB-D44" id="qa3-FG-c9F"/>
                                             </connections>
                                         </button>
                                     </items>
                                 </group>
-                                <button width="1" alignment="left" verticalAlignment="bottom" title="Add Carbs" id="b6f-3I-jki">
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="g" id="b6f-3I-jki">
                                     <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
                                     <connections>
@@ -250,7 +244,7 @@
                                         </group>
                                     </items>
                                 </group>
-                                <label alignment="center" text="UNITS" textAlignment="center" numberOfLines="3" id="rV7-d9-n6u">
+                                <label alignment="center" textAlignment="center" numberOfLines="3" id="rV7-d9-n6u">
                                     <color key="textColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
@@ -258,7 +252,7 @@
                                     <color key="textColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                 </label>
-                                <button width="1" alignment="left" verticalAlignment="bottom" title="Bolus" id="Qsq-p5-1J0">
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="U" id="Qsq-p5-1J0">
                                     <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
                                     <connections>
