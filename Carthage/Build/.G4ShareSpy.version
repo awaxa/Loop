@@ -1,18 +1,18 @@
 {
-  "iOS" : [
-    {
-      "hash" : "727ae983702a1efeb9da6966329e640e0f8d449c736e189d8b3274622d742300",
-      "name" : "G4ShareSpy"
-    }
+  "Mac" : [
+
   ],
-  "commitish" : "v0.3.3",
   "watchOS" : [
 
   ],
   "tvOS" : [
 
   ],
-  "Mac" : [
-
+  "commitish" : "v0.3.3",
+  "iOS" : [
+    {
+      "name" : "G4ShareSpy",
+      "hash" : "a78dbab55e6bd4ac5783241730ccb7ec870f933c79e5bd0163aa718b97089787"
+    }
   ]
 }
