@@ -19,8 +19,8 @@ class NightscoutService: ServiceAuthentication {
     init(siteURL: URL?, APISecret: String?) {
         credentials = [
             ServiceCredential(
-                title: NSLocalizedString("Site URL", comment: "The title of the nightscout site URL credential"),
-                placeholder: NSLocalizedString("https://mysite.azurewebsites.net", comment: "The placeholder text for the nightscout site URL credential"),
+                title: NSLocalizedString("Site URL", comment: "The title of the nightscout site URL"),
+                placeholder: NSLocalizedString("https://my.herokuapp.com", comment: "The placeholder text for the nightscout site URL"),
                 isSecret: false,
                 keyboardType: .URL,
                 value: siteURL?.absoluteString
