@@ -12,7 +12,7 @@ import WatchConnectivity
 
 final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClass {
 
-    private var carbValue: Int = 15 {
+    private var carbValue: Int = 0 {
         didSet {
             if carbValue < 0 {
                 carbValue = 0
@@ -119,7 +119,7 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
 
     // MARK: - Actions
 
-    private let valueIncrement = 5
+    private let valueIncrement = 7
     private let dateIncrement = TimeInterval(minutes: 15)
 
     @IBAction func decrement() {
