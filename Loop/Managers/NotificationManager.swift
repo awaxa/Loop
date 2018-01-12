@@ -104,7 +104,7 @@ struct NotificationManager {
         // Give a little extra time for a loop-in-progress to complete
         let gracePeriod = TimeInterval(minutes: 0.5)
 
-        for minutes: Double in [20, 40, 60, 120] {
+        for minutes: Double in [20] {
             let notification = UNMutableNotificationContent()
             let failureInterval = TimeInterval(minutes: minutes)
 
@@ -136,38 +136,38 @@ struct NotificationManager {
     }
 
     static func sendPumpBatteryLowNotification() {
-        let notification = UNMutableNotificationContent()
+        // let notification = UNMutableNotificationContent()
 
-        notification.title = NSLocalizedString("Pump Battery Low", comment: "The notification title for a low pump battery")
-        notification.body = NSLocalizedString("Change the pump battery immediately", comment: "The notification alert describing a low pump battery")
-        notification.sound = UNNotificationSound.default()
-        notification.categoryIdentifier = Category.pumpBatteryLow.rawValue
+        // notification.title = NSLocalizedString("Pump Battery Low", comment: "The notification title for a low pump battery")
+        // notification.body = NSLocalizedString("Change the pump battery immediately", comment: "The notification alert describing a low pump battery")
+        // notification.sound = UNNotificationSound.default()
+        // notification.categoryIdentifier = Category.pumpBatteryLow.rawValue
 
-        let request = UNNotificationRequest(
-            identifier: Category.pumpBatteryLow.rawValue,
-            content: notification,
-            trigger: nil
-        )
+        // let request = UNNotificationRequest(
+        //     identifier: Category.pumpBatteryLow.rawValue,
+        //     content: notification,
+        //     trigger: nil
+        // )
 
-        UNUserNotificationCenter.current().add(request)
+        // UNUserNotificationCenter.current().add(request)
     }
 
     static func sendPumpReservoirEmptyNotification() {
-        let notification = UNMutableNotificationContent()
+        // let notification = UNMutableNotificationContent()
 
-        notification.title = NSLocalizedString("Pump Reservoir Empty", comment: "The notification title for an empty pump reservoir")
-        notification.body = NSLocalizedString("Change the pump reservoir now", comment: "The notification alert describing an empty pump reservoir")
-        notification.sound = UNNotificationSound.default()
-        notification.categoryIdentifier = Category.pumpReservoirEmpty.rawValue
+        // notification.title = NSLocalizedString("Pump Reservoir Empty", comment: "The notification title for an empty pump reservoir")
+        // notification.body = NSLocalizedString("Change the pump reservoir now", comment: "The notification alert describing an empty pump reservoir")
+        // notification.sound = UNNotificationSound.default()
+        // notification.categoryIdentifier = Category.pumpReservoirEmpty.rawValue
 
-        let request = UNNotificationRequest(
-            // Not a typo: this should replace any pump reservoir low notifications
-            identifier: Category.pumpReservoirLow.rawValue,
-            content: notification,
-            trigger: nil
-        )
+        // let request = UNNotificationRequest(
+        //     // Not a typo: this should replace any pump reservoir low notifications
+        //     identifier: Category.pumpReservoirLow.rawValue,
+        //     content: notification,
+        //     trigger: nil
+        // )
 
-        UNUserNotificationCenter.current().add(request)
+        // UNUserNotificationCenter.current().add(request)
     }
 
     static func sendPumpReservoirLowNotificationForAmount(_ units: Double, andTimeRemaining remaining: TimeInterval?) {
