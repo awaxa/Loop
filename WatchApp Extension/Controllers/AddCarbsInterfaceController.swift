@@ -16,8 +16,8 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
         didSet {
             if carbValue < 0 {
                 carbValue = 0
-            } else if carbValue > 100 {
-                carbValue = 100
+            } else if carbValue > 140 {
+                carbValue = 140
             }
 
             valueLabel.setText(String(carbValue))
@@ -187,7 +187,7 @@ final class AddCarbsInterfaceController: WKInterfaceController, IdentifiableClas
     private var accumulatedRotation: Double = 0
 }
 
-private let rotationsPerIncrement: Double = 1/24
+private let rotationsPerIncrement: Double = 1/60
 
 extension AddCarbsInterfaceController: WKCrownDelegate {
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
