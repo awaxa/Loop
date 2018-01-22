@@ -155,12 +155,12 @@ extension TempBasalRecommendation {
                 lastTempBasal.endDate.timeIntervalSince(date) > continuationInterval {
                 return nil
             } else if matchesRate(scheduledBasalRate) {
-                // If our new temp matches the scheduled rate, cancel the current temp
-                return .cancel
+                // If our new temp matches the scheduled rate, enact it
+                return self
             }
         } else if matchesRate(scheduledBasalRate) {
-            // If we recommend the in-progress scheduled basal rate, do nothing
-            return nil
+            // If we recommend the in-progress scheduled basal rate, enact it
+            return self
         }
 
         return self
